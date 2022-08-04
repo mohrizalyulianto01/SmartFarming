@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailActivity">
+
+        <LinearLayout
+            android:id="@+id/filter_layout"
+            android:layout_width="361dp"
+            android:layout_height="122dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sensor_text_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sensor"
+                app:startIconDrawable="@drawable/ic_baseline_router_24">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/sensor_auto_complete_text_view"
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    tools:text="Sensor ph" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="date"
+                        tools:text="2021-07-07" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/apply_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="Apply" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:text="Chart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_layout" />
+
+        <View
+            android:id="@+id/chart_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/blue_1"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/chart_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/chart_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@id/chart_divider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="9dp" />
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/image_tittle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginVertical="@dimen/activity_vertical_margin"-->
+<!--            android:text="Last Condition"/>-->
+
+
+
+<!--        <TextView>-->
+<!--           android:id="@+id/image_title"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_marginHorizontal="@dimen/activity_horizontal_margin"-->
+<!--           android:layout_marginVertical="@dimen/activity_vertical_margin"-->
+<!--           android:text="Last Condition"-->
+<!--           android:textSize="20sp"-->
+<!--           android:textStyle="bold"-->
+<!--           app:layout_constraintStart_toStartOf="parent"-->
+<!--           app:layout_constraintTop_toBottomOf="@id/chart_layout"-->
+
+<!--      <View>-->
+<!--           android:id="@+id/image_divider">-->
+<!--            android:layout_width="match_parent">-->
+<!--            android:layout_height="2dp">-->
+<!--           android:background="@color/green"&ndash;&gt;-->
+<!--            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"&ndash;&gt;-->
+<!--          app:layout_constraintTop_toBottomOf="@id/image_title"&ndash;&gt;-->
+<!--           app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>&ndash;&gt;-->
+
+<!--       <ImageView>-->
+<!--           android:layout_width="300dp">-->
+<!--           android:layout_height="200dp">-->
+<!--           android:maxWidth="300dp">-->
+<!--           android:maxHeight="200dp">-->
+<!--           android:layout_marginVertical="@dimen/activity_vertical_margin">-->
+<!--           android:scaleType="centerCrop">-->
+<!--           app:layout_constraintEnd_toEndOf="parent">-->
+<!--           app:layout_constraintStart_toStartOf="parent">-->
+<!--           app:layout_constraintTop_toBottomOf="@id/image_divider">-->
+<!--           app:srcCompat="@drawable/img1"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    >
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="91dp"
+        android:layout_height="64dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/tvNamaPengguna"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Administrator" />
+
+    <TextView
+        android:id="@+id/tvEmailPengguna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNamaPengguna"
+        android:layout_centerHorizontal="true"
+        android:text="administrator@example.com" />
+
+    <LinearLayout
+        android:id="@+id/layStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmailPengguna"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/hollow_green_button"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/gh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/icon_gh_1" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gh"
+                android:layout_centerHorizontal="true"
+                android:text="Greenhouse\nTerdaftar"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvGHCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv3"
+                android:layout_centerHorizontal="true"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/hollow_green_button"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sensorCount"
+                android:layout_width="84dp"
+                android:layout_height="89dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_sensor" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sensorCount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Sensor Aktif"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvSensorCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv4"
+                android:layout_centerHorizontal="true"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/hollow_green_button"
+        android:backgroundTint="@color/blue_1"
+        android:paddingHorizontal="30dp"
+        android:text="Log Out"
+        android:textAllCaps="false" />
+
+
+
+
+</RelativeLayout>

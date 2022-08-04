@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recordjadwal_container"
+    android:background="@drawable/bg_record"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_record">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/waktuawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Waktu Awal"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/waktuakhir"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waktuawal"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp"
+            android:text="Waktu Akhir"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hasilwaktu_awal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="11dp"
+            android:text="waktu" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hasilwaktu_akhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasilwaktu_awal"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="9dp"
+            android:text="waktu" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hapusjadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="20dp"
+            android:text="Hapus Jadwal"
+            android:textColor="@color/red500"
+            android:textSize="14dp" />
+
+
+    </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
